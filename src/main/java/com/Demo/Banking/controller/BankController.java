@@ -50,12 +50,12 @@ public class BankController {
 
     @GetMapping("/bankapp?accountId={id}")
     public Bank getBankById(@PathVariable(value = "id") Long accountId) {
-    	System.err.print(accountId+"ttttttttttttttttttTTTTTT");
+    	
         return bankRepository.findById(accountId)
                 .orElseThrow(() -> new ResourceNotFoundException("Bank", "id", accountId));
     }
     
-    @GetMapping("/bankapp/{firstName}")
+    @GetMapping("/bankapp?firstName={firstName}")
     public Bank findByFirstName(@PathVariable(value = "firstName") String firstName) {
     	
          List<User> user =   userRepository.findByFirstNameIgnoreCaseContaining(firstName);
@@ -64,7 +64,7 @@ public class BankController {
           
                // .orElseThrow(() -> new ResourceNotFoundException("Bank", "firstName", firstName));
     }
-    @GetMapping("/bankapp/{lastName}")
+    @GetMapping("/bankapp/bankapp?lastName={lastName}")
     public Bank findByLastName(@PathVariable(value = "lastName") String lastName) {
         return bankRepository.findByLastName(lastName);
                // .orElseThrow(() -> new ResourceNotFoundException("Bank", "id", lastName));
