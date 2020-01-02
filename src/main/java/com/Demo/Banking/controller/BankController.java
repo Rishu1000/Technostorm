@@ -58,8 +58,8 @@ public class BankController {
     @GetMapping("/bankapp?firstName={firstName}")
     public Bank findByFirstName(@PathVariable(value = "firstName") String firstName) {
     	
-         List<User> user =   userRepository.findByFirstNameIgnoreCaseContaining(firstName);
-         System.err.print(user);
+         User user =   userRepository.findByFirstNameIgnoreCaseContaining(firstName);
+         
          return null;
           
                // .orElseThrow(() -> new ResourceNotFoundException("Bank", "firstName", firstName));

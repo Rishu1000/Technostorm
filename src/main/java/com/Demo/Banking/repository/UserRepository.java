@@ -19,7 +19,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	
 
-	List<User> findByFirstNameIgnoreCaseContaining(String firstName);
+	User findByFirstNameIgnoreCaseContaining(String firstName);
 
 
 	
