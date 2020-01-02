@@ -15,11 +15,11 @@ import com.Demo.Banking.model.User;
  */
 
 @Repository
-public interface BankRepository extends JpaRepository<Bank, Long>, BankRepositoryCustom {
+public interface UserRepository extends JpaRepository<User, Long> {
 
 	
 
-	
+	List<User> findByFirstNameIgnoreCaseContaining(String firstName);
 
 
 	

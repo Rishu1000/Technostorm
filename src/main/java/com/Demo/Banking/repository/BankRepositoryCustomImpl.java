@@ -19,12 +19,13 @@ public class BankRepositoryCustomImpl implements BankRepositoryCustom {
 	public Bank findByFirstName(String firstName) {
 		// TODO Auto-generated method stub
 		Query query = entityManager.createNativeQuery(
-				"SELECT em.* FROM spring_data_jpa_example.employee as em " + "WHERE em.firstname LIKE ?", User.class);
+				"SELECT * FROM bank as bn  " + "WHERE bn.firstname LIKE ?", User.class);
 		query.setParameter(1, firstName + "%");
 		return (Bank) query.getResultList();
 
 	}
 
+	
 	@Override
 	public Bank findByLastName(String lastName) {
 		// TODO Auto-generated method stub
@@ -36,5 +37,11 @@ public class BankRepositoryCustomImpl implements BankRepositoryCustom {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+	
+
+
+	
 
 }

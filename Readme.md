@@ -33,7 +33,7 @@ create database banks_app
 
 ```bash
 mvn package
-java -jar target/easy-notes-1.0.0.jar
+java -jar target/technostorm-1.0.0.jar
 ```
 
 Alternatively, you can run the app without packaging it using -

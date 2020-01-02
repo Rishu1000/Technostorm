@@ -25,6 +25,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class User {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="user_id")
 	private Long userId;
 	
 	@NotBlank
@@ -35,11 +36,11 @@ public class User {
 	
 	private int age;
 	
-	@OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_Id", nullable = false)
+	@OneToOne(mappedBy = "user")
+    
 	private Bank bank;
 	
-	@NotBlank
+
 	private String address;
 	
 	@Column(nullable = false, updatable = false)
