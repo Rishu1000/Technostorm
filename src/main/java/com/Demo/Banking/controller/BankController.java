@@ -2,18 +2,13 @@ package com.Demo.Banking.controller;
 
 import com.Demo.Banking.exception.ResourceNotFoundException;
 import com.Demo.Banking.model.Bank;
-import com.Demo.Banking.model.Both;
 import com.Demo.Banking.model.User;
 import com.Demo.Banking.repository.BankRepository;
 import com.Demo.Banking.repository.UserRepository;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 
 import java.sql.Date;
 import java.util.List;
